@@ -1,0 +1,825 @@
+/* ==========================
+  COMMON CSS PART STAQRT
+===============================*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button {
+    padding: 14px 28px;
+    border-radius: 18px;
+    border: 0;
+    background: var(--orancecolor);
+    color: var(--commoncolor);
+    font-family: var(--ninito);
+    font-weight: var(--semibold);
+    font-size: 18px;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    transition: all linear.4s;
+}
+
+button:hover {
+    background: transparent;
+    border-color: var(--orancecolor);
+    color: var(--orancecolor);
+}
+
+
+:root {
+    --opensans: 'Open Sans', sans-serif;
+    --ninito: 'Nunito', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+    --blackfont: 900;
+    --primarycolor: #29313D;
+    --paracolor: #29313D;
+    --commoncolor: #fff;
+    --orancecolor: #FF5538;
+    --roundcolor: #C087EE;
+    --iconcolor: #FFABBA;
+    --bgcolor: #FBF3F0;
+    --smbgcolor: #FDF9F8;
+    --iconbg: #FFDDD7;
+    --getbg: #FFD7C8;
+}
+
+.title h2 {
+    font-family: var(--poppins);
+    font-size: 48px;
+    color: var(--primarycolor);
+    font-weight: var(--semibold);
+    line-height: 140%;
+    text-transform: capitalize;
+}
+
+.title h4 {
+    font-family: var(--poppins);
+    font-size: 20px;
+    color: var(--orancecolor);
+    font-weight: var(--medium);
+    line-height: 140%;
+    text-transform: capitalize;
+}
+
+/* ==============================
+  COMMON CSS PART END 
+===============================*/
+
+/* ==============================
+  NAV PART CSS START
+===============================*/
+nav {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar .navbar-nav .nav-item {
+    font-family: var(--opensans);
+    font-weight: var(--semibold);
+    font-size: 18px;
+    color: var(--primarycolor);
+    margin: 0 18px;
+    transition: all linear .4s;
+}
+
+.navbar .navbar-nav .nav-item:hover .nav-link{
+    color: var(--orancecolor) !important;
+}
+.navbar .navbar-nav .nav-item i {
+    margin-left: 12px;
+    transition:  all linear .4s;
+    -webkit-transition:  all linear .4s;
+    -moz-transition:  all linear .4s;
+    -ms-transition:  all linear .4s;
+    -o-transition:  all linear .4s;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li .dropdown {
+	position: absolute;
+	background: var(--iconbg);
+	padding: 25px;
+	width: 200px;
+	border-radius: 5px;
+	opacity: 0;
+	transform: translateY(50%);
+	left: -20px;
+    transition: all linear .4s;
+}
+nav ul li .dropdown ul li a{
+    font-family: var(--opensans);
+    font-weight: var(--semibold);
+    font-size: 18px;
+    color: var(--primarycolor);
+    margin: 7px 0;
+    display: inline-block;
+    transition: all linear .4s;
+}
+.navbar .navbar-nav .nav-item:hover .dropdown{
+    transform: translateY(10%);
+    opacity: 1;
+}
+nav ul li .dropdown ul li a:hover{
+    color: var(--orancecolor);
+}
+/* ==============================
+  NAV PAERT CSS END 
+===============================*/
+
+/* ==============================
+  BANNER PART CSS START
+===============================*/
+
+#banner {
+    background: url(../images/Group\ 1000007169.png) no-repeat center;
+    background-size: cover;
+    padding: 300px 0;
+    position: relative;
+}
+
+#banner .round-shape {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--orancecolor);
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    top: 150px;
+    animation: 3s round linear infinite;
+}
+
+@keyframes round {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#banner .round-shape .inner-round {
+    width: 20px;
+    height: 20px;
+    background: var(--orancecolor);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 11px;
+}
+
+#banner .round1 {
+    width: 18px;
+    height: 18px;
+    background: var(--roundcolor);
+    border-radius: 50%;
+    position: absolute;
+    top: 160px;
+    right: 500px;
+    animation: boro 3s infinite alternate;
+}
+
+@keyframes boro {
+    from {
+        transform: scale(.5);
+        top: 160px;
+    }
+
+    to {
+        transform: scale(2);
+        top: 180px;
+    }
+}
+
+#banner .round2 {
+    width: 18px;
+    height: 18px;
+    background: var(--iconcolor);
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    animation: borolox 3s infinite alternate;
+}
+
+@keyframes borolox {
+    from {
+        transform: scale(2);
+    }
+
+    to {
+        transform: scale(.5);
+    }
+}
+
+#banner i {
+    font-size: 24px;
+    position: absolute;
+    animation: 3s round linear infinite;
+}
+
+#banner .cross {
+    color: var(--roundcolor);
+    right: 210px;
+    top: 320px;
+}
+
+#banner .cross2 {
+    color: var(--iconcolor);
+    left: 140px;
+    top: 147px;
+    animation: 3s round linear infinite;
+}
+
+#banner .cross3 {
+    color: var(--iconcolor);
+    left: 50%;
+    bottom: 240px;
+}
+
+#banner .banner-text h1 {
+    font-family: var(--poppins);
+    font-weight: var(--bold);
+    font-size: 64px;
+    color: var(--primarycolor);
+    line-height: 130%;
+    padding: 0 274px;
+    text-transform: capitalize;
+}
+
+#banner .banner-text p {
+    font-family: var(--ninitos);
+    font-weight: var(--regular);
+    font-size: 18px;
+    color: var(--primarycolor);
+    line-height: 200%;
+    padding: 0 29%;
+    margin-bottom: 20px;
+}
+
+#banner .banner-text button {
+    margin: 0 12px;
+}
+
+#banner .dim {
+    position: absolute;
+    bottom: -155px;
+    left: -100px;
+}
+
+/* ==============================
+  BANNER PART CSS END 
+===============================*/
+
+/* ==============================
+    SERVICE PART CSS START
+===============================*/
+#service {
+    margin-bottom: 60px;
+    transform: translateY(-50%);
+}
+
+#service .service-item {
+    padding: 40px 30px;
+    background: var(--commoncolor);
+    height: 330px;
+    box-shadow: 0px 0px 109px -24px rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0px 0px 109px -24px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 0px 109px -24px rgba(0, 0, 0, 0.19);
+}
+
+#service .service-item h3 {
+    font-family: var(--poppins);
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 25px;
+    line-height: 160%;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+#service .service-item p {
+    font-family: var(--ninito);
+    font-weight: var(--regular);
+    color: var(--primarycolor);
+    font-size: 18px;
+    line-height: 200%;
+    text-transform: capitalize;
+}
+
+/* ==============================
+  SERVICE PART CSS END
+===============================*/
+
+/* ==============================
+  CONNECT PART CSS START
+===============================*/
+
+#connect {
+    position: relative;
+}
+
+#connect .round-shape {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--orancecolor);
+    border-radius: 50%;
+    position: absolute;
+    left: 38%;
+    transform: translateX(-50%);
+    top: 150px;
+    animation: 3s round linear infinite;
+}
+
+@keyframes round {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#connect .round-shape .inner-round {
+    width: 20px;
+    height: 20px;
+    background: var(--orancecolor);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 11px;
+}
+
+#connect h2 {
+    width: 450px;
+    margin-bottom: 14px;
+}
+
+#connect .contact-img {
+    width: 112%;
+    position: relative;
+    z-index: 9;
+}
+
+#connect .contact-bg {
+    background: var(--bgcolor);
+    padding: 100px 120px;
+    position: relative;
+    z-index: 3;
+}
+
+#connect .contact-bg h2 {
+    font-family: var(--poppins);
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 33px;
+    line-height: 140%;
+    width: 100%;
+}
+
+#connect .contact-bg p {
+    font-family: var(--ninitos);
+    font-weight: var(--regular);
+    font-size: 18px;
+    color: var(--primarycolor);
+    line-height: 200%;
+}
+
+#connect .stic {
+    position: absolute;
+    bottom: -213px;
+    right: -150px;
+    animation: lathi 8s infinite linear alternate;
+    z-index: -3;
+}
+
+@keyframes lathi {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-40deg);
+    }
+}
+
+/* ==============================
+  CONNECT PART CSS END
+===============================*/
+
+/* ==============================
+  counting CSS START
+===============================*/
+
+#counting {
+    padding: 120px 0;
+    position: relative;
+}
+
+#counting .countact {
+    position: absolute;
+    top: -227px;
+    left: -7px;
+    z-index: -1;
+}
+
+#counting .title h2 {
+    width: 700px;
+    margin-bottom: 60px;
+}
+
+#counting button {
+    height: 60px;
+    border-color: var(--orancecolor);
+    background: transparent;
+    color: var(--orancecolor);
+}
+
+#counting button:hover {
+    background: var(--orancecolor);
+    color: var(--commoncolor);
+}
+
+#counting .count-item .coun-text h3 {
+    font-family: var(--poppins);
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+#counting .count-item .coun-text {
+    background: var(--commoncolor);
+    padding: 30px;
+    box-shadow: 0px 0px 109px -24px rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0px 0px 109px -24px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 0px 109px -24px rgba(0, 0, 0, 0.19);
+    transform: translateY(0%);
+    opacity: 0;
+    transition: all linear .4s;
+}
+
+#counting .count-item:hover .coun-text {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+#counting .count-item .coun-text h5 {
+    font-family: var(--poppins);
+    font-size: 20px;
+    color: var(--orancecolor);
+    font-weight: var(--medium);
+    line-height: 140%;
+}
+
+/* ==============================
+  counting PART CSS END
+===============================*/
+
+/* ==============================
+  WORK PART START
+===============================*/
+
+#work {
+    background: url(../images/Group\ 1000007170.png) no-repeat center;
+    background-size: cover;
+    padding: 120px 0;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 3;
+}
+
+#work .work-item {
+    background: var(--commoncolor);
+    text-align: center;
+    padding: 70px 0;
+    margin-bottom: 30px;
+}
+
+#work .work-item h2 {
+    font-family: var(--poppins);
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 40px;
+    line-height: 140%;
+}
+
+#work .work-item p {
+    font-family: var(--ninito);
+    font-weight: var(--regular);
+    color: var(--primarycolor);
+    font-size: 16px;
+    line-height: 100%;
+}
+
+#work .work-right {
+    margin-left: 80px;
+}
+
+#work .work-right h2 {
+    font-family: var(--poppins);
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 48px;
+    line-height: 140%;
+    width: 570px;
+}
+
+#work .work-right p {
+    font-family: var(--ninito);
+    font-weight: var(--regular);
+    color: var(--primarycolor);
+    font-size: 18px;
+    line-height: 200%;
+    width: 530px;
+}
+
+#work .round-shape {
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--orancecolor);
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    transform: translateX(-50%);
+    top: 150px;
+    z-index: -1;
+    animation: 3s round linear infinite;
+}
+
+@keyframes round {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#work .round-shape .inner-round {
+    width: 20px;
+    height: 20px;
+    background: var(--orancecolor);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 42px;
+    left: 65%;
+}
+
+#work .round1 {
+    width: 18px;
+    height: 18px;
+    background: var(--roundcolor);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 85px;
+    left: 620px;
+    animation: boros 3s infinite alternate;
+}
+
+@keyframes boros {
+    from {
+        transform: scale(.5);
+        bottom: 85px;
+    }
+
+    to {
+        transform: scale(2);
+        bottom: 100px;
+    }
+}
+
+#work .cross {
+    color: var(--iconcolor);
+    right: 240px;
+    top: 120px;
+    animation: 3s round linear infinite;
+    position: absolute;
+    font-size: 18px;
+}
+
+/* ==============================
+  WORK PARTV END 
+===============================*/
+
+/* ==============================
+  TRUST PART START
+===============================*/
+
+#trust {
+    margin-bottom: 120px;
+}
+
+#trust h2 {
+    font-family: var(--poppins);
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 48px;
+    line-height: 140%;
+    padding: 0 15%;
+    margin-bottom: 60px;
+}
+
+#trust .trust-item {
+    background: var(--smbgcolor);
+    padding: 47px 40px;
+}
+
+/* ==============================
+  TRUST PART END 
+===============================*/
+
+/* ==============================
+  CUSTOMER PART START
+===============================*/
+
+#customer {
+    background: var(--bgcolor);
+    padding: 120px 0;
+}
+
+#customer .customer-img {
+    gap: 28px;
+}
+
+#customer .customer-text h2 {
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 48px;
+    line-height: 140%;
+    margin-bottom: 60px;
+}
+
+#customer .customer-text p {
+    font-family: var(--ninito);
+    font-weight: var(--regular);
+    color: var(--primarycolor);
+    font-size: 20px;
+    line-height: 200%;
+    margin: 40px 0;
+}
+
+#customer .customer-text .john {
+    margin: 0;
+    font-size: 36px;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+#customer .customer-text i {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    background: var(--iconbg);
+    text-align: center;
+    line-height: 64px;
+    color: var(--primarycolor);
+    transition: all linear.4s;
+    margin-right: 24px;
+}
+
+#customer .customer-text i:hover {
+    background: var(--orancecolor);
+    color: var(--commoncolor);
+}
+
+/* ==============================
+  CUSTOMER PART END 
+===============================*/
+
+/* ==============================
+ PROJECT PART START 
+===============================*/
+
+#project {
+    padding: 100px 0;
+    background: var(--getbg);
+    position: relative;
+    margin-bottom: 120px;
+    z-index: 4;
+}
+
+#project .shape3 {
+    position: absolute;
+    right: -108px;
+    top: -37px;
+    transform: scale(.8);
+    z-index: -1;
+}
+
+#project .project-item {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--primarycolor);
+}
+
+#project .project-text {
+    width: 85%;
+}
+
+#project .project-text h4 {
+    font-family: var(--poppins);
+    color: var(--primarycolor);
+    font-weight: var(--regular);
+    font-size: 20px;
+    line-height: 140%;
+}
+
+#project .project-text h2 {
+    font-family: var(--poppins);
+    color: var(--primarycolor);
+    font-weight: var(--semibold);
+    font-size: 48px;
+    line-height: 140%;
+}
+
+#project button {
+    height: 55px;
+}
+
+#project p {
+    font-family: var(--ninito);
+    font-weight: var(--regular);
+    color: var(--primarycolor);
+    font-size: 20px;
+    line-height: 180%;
+    margin-top: 24px;
+}
+
+/* ==============================
+  PROJECT PART END 
+===============================*/
+
+/* ==============================
+  FOOTER PART START
+===============================*/
+footer{
+    margin-bottom: 50px;
+}
+footer p {
+    font-family: var(--ninito);
+    font-weight: var(--regular);
+    color: var(--primarycolor);
+    font-size: 18px;
+    line-height: 180%;
+    margin-top: 44px;
+}
+
+footer h3 {
+    font-family: var(--poppins);
+    color: var(--primarycolor);
+    font-weight: var(--semibold);
+    font-size: 24px;
+    line-height: 140%;
+    margin-bottom: 48px;
+}
+
+footer ul li a {
+    display: inline-block;
+    font-family: var(--ninito);
+    font-weight: var(--semibold);
+    color: var(--primarycolor);
+    font-size: 20px;
+    margin: 10px 0;
+    transition: all linear .4s;
+}
+footer ul li a:hover{
+    color: var(--orancecolor);
+    margin-left: 12px;
+}
+footer .copyright p{
+    display: inline-block;
+}
+footer .copyright .copy-right p{
+    margin-left: 60px;
+}
+/* ==============================
+ FOOTER PART END 
+===============================*/
